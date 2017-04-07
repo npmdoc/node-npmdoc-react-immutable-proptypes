@@ -1,0 +1,1713 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/HurricaneJames/react-immutable-proptypes"
+
+    >react-immutable-proptypes (v2.1.0)</a>
+</h1>
+<h4>PropType validators that work with Immutable.js.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes">module react-immutable-proptypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.contains">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>contains
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.iterable">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.iterableOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterableOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.list">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>list
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.listOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>listOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.map">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>map
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.mapContains">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>mapContains
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.mapOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>mapOf
+            <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedMap">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedMapOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMapOf
+            <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedSet">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedSetOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSetOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.record">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>record
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.recordOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>recordOf
+            <span class="apidocSignatureSpan">(recordKeys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.seq">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>seq
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.set">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.setOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>setOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.shape">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>shape
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.stack">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.stackOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stackOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-immutable-proptypes.</span>ImmutablePropTypes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.ImmutablePropTypes">module react-immutable-proptypes.ImmutablePropTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.contains">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>contains
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterable">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>iterable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterableOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>iterableOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.list">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>list
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.listOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>listOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.map">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>map
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapContains">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>mapContains
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>mapOf
+            <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMap">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMapOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedMapOf
+            <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSet">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSetOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedSetOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.record">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>record
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.recordOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>recordOf
+            <span class="apidocSignatureSpan">(recordKeys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.seq">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>seq
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.set">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.setOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>setOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.shape">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>shape
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stack">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>stack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stackOf">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>stackOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.iterable">module react-immutable-proptypes.iterable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.iterable.iterable">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.iterable.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.iterable.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.list">module react-immutable-proptypes.list</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.list.list">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>list
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.list.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.list.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.map">module react-immutable-proptypes.map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.map.map">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>map
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.map.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.map.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.orderedMap">module react-immutable-proptypes.orderedMap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedMap.orderedMap">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedMap.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.orderedMap.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.orderedSet">module react-immutable-proptypes.orderedSet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedSet.orderedSet">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.orderedSet.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.orderedSet.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.record">module react-immutable-proptypes.record</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.record.record">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>record
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.record.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.record.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.seq">module react-immutable-proptypes.seq</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.seq.seq">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>seq
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.seq.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.seq.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.set">module react-immutable-proptypes.set</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.set.set">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.set.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.set.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-immutable-proptypes.stack">module react-immutable-proptypes.stack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.stack.stack">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-immutable-proptypes.stack.isRequired">
+            function <span class="apidocSignatureSpan">react-immutable-proptypes.stack.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes" id="apidoc.module.react-immutable-proptypes">module react-immutable-proptypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.contains" id="apidoc.element.react-immutable-proptypes.contains">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>contains
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var ImmutablePropTypes = require(&#x27;react-immutable-proptypes&#x27;);
+var MyReactComponent = React.createClass({
+    // ...
+    propTypes: {
+        myRequiredImmutableList: ImmutablePropTypes.listOf(
+            ImmutablePropTypes.<span class="apidocCodeKeywordSpan">contains</span>({
+                someNumberProp: React.PropTypes.number.isRequired
+            })
+        ).isRequired
+    }
+    // ...
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.iterable" id="apidoc.element.react-immutable-proptypes.iterable">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">iterable = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.iterableOf" id="apidoc.element.react-immutable-proptypes.iterableOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterableOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createIterableOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x22;Iterable&#x22;, Immutable.Iterable.isIterable);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.list" id="apidoc.element.react-immutable-proptypes.list">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>list
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.listOf" id="apidoc.element.react-immutable-proptypes.listOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>listOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createListOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x22;List&#x22;, Immutable.List.isList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Usage is simple, they work with and like any `React.PropType.*` validator.
+
+```js
+var ImmutablePropTypes = require(&#x27;react-immutable-proptypes&#x27;);
+var MyReactComponent = React.createClass({
+    // ...
+    propTypes: {
+        myRequiredImmutableList: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">listOf</span>(
+            ImmutablePropTypes.contains({
+                someNumberProp: React.PropTypes.number.isRequired
+            })
+        ).isRequired
+    }
+    // ...
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.map" id="apidoc.element.react-immutable-proptypes.map">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>map
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.mapContains" id="apidoc.element.react-immutable-proptypes.mapContains">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>mapContains
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createMapContainsChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes, &#x22;Map&#x22;, Immutable.Map.isMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.mapOf` allows you to control both map values nad keys (in Immutable.Map, keys could be _anything_ including
+ another Immutable collections). It accepts two arguments - first one for values, second one for keys (optional). If you are interested
+ in validation of keys only, just pass `React.PropTypes.any` as the first argument.
+
+```es6
+// ...
+aMap: ImmutablePropTypes.mapOf(
+React.PropTypes.any, // validation for values
+ImmutablePropTypes.<span class="apidocCodeKeywordSpan">mapContains</span>({ // validation for keys
+    a: React.PropTypes.number.isRequired,
+    b: React.PropTypes.string
+})
+)
+// ...
+const aMap = Immutable.Map([
+[Immutable.Map({a: 1, b: &#x27;2&#x27;}), &#x27;foo&#x27;],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.mapOf" id="apidoc.element.react-immutable-proptypes.mapOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>mapOf
+        <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createMapOfTypeChecker(valuesTypeChecker, keysTypeChecker) {
+  return createMapOfTypeCheckerFactory(valuesTypeChecker, keysTypeChecker, &#x22;Map&#x22;, Immutable.Map.isMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.listOf` is based on `React.PropTypes.array` and is specific to `Immutable.List`.
+
+* `ImmutablePropTypes.mapOf` allows you to control both map values nad keys (in Immutable.Map, keys could be _anything_ including
+ another Immutable collections). It accepts two arguments - first one for values, second one for keys (optional). If you are interested
+ in validation of keys only, just pass `React.PropTypes.any` as the first argument.
+
+```es6
+// ...
+aMap: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">mapOf</span>(
+    React.PropTypes.any, // validation for values
+    ImmutablePropTypes.mapContains({ // validation for keys
+        a: React.PropTypes.number.isRequired,
+        b: React.PropTypes.string
+    })
+)
+// ...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedMap" id="apidoc.element.react-immutable-proptypes.orderedMap">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedMap = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedMapOf" id="apidoc.element.react-immutable-proptypes.orderedMapOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMapOf
+        <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createOrderedMapOfTypeChecker(valuesTypeChecker, keysTypeChecker) {
+  return createMapOfTypeCheckerFactory(valuesTypeChecker, keysTypeChecker, &#x22;OrderedMap&#x22;, Immutable.OrderedMap.isOrderedMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedSet" id="apidoc.element.react-immutable-proptypes.orderedSet">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedSet = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedSetOf" id="apidoc.element.react-immutable-proptypes.orderedSetOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSetOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createOrderedSetOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x22;OrderedSet&#x22;, Immutable.OrderedSet.isOrderedSet);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.record" id="apidoc.element.react-immutable-proptypes.record">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>record
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">record = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.recordOf" id="apidoc.element.react-immutable-proptypes.recordOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>recordOf
+        <span class="apidocSignatureSpan">(recordKeys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRecordOfTypeChecker(recordKeys) {
+  function validate(props, propName, componentName, location, propFullName) {
+    for (var _len = arguments.length, rest = Array(_len &#x3e; 5 ? _len - 5 : 0), _key = 5; _key &#x3c; _len; _key++) {
+      rest[_key - 5] = arguments[_key];
+    }
+
+    var propValue = props[propName];
+    if (!(propValue instanceof Immutable.Record)) {
+      var propType = getPropType(propValue);
+      var locationName = location;
+      return new Error(&#x22;Invalid &#x22; + locationName + &#x22; `&#x22; + propFullName + &#x22;` of type `&#x22; + propType + &#x22;` &#x22; + (&#x22;supplied to `&#x22; + componentName
+ + &#x22;`, expected an Immutable.js Record.&#x22;));
+    }
+    for (var key in recordKeys) {
+      var checker = recordKeys[key];
+      if (!checker) {
+        continue;
+      }
+      var mutablePropValue = propValue.toObject();
+      var error = checker.apply(undefined, [mutablePropValue, key, componentName, location, &#x22;&#x22; + propFullName + &#x22;.&#x22; + key].concat
+(rest));
+      if (error) {
+        return error;
+      }
+    }
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.iterableOf` is the generic form of listOf/mapOf. It is useful when there is no need to validate anything other
+ than Immutable.js compatible (ie. `Immutable.Iterable`). Continue to use `listOf` and/or `mapOf` when you know the type.
+
+* `ImmutablePropTypes.recordOf` is like `contains`, except it operates on Record properties.
+
+```js
+// ...
+aRecord: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">recordOf</span>({
+    keyA: React.PropTypes.string,
+    keyB: ImmutablePropTypes.list.isRequired
+})
+// ...
+```
+
+* `ImmutablePropTypes.mapContains` is based on `React.PropTypes.shape` and will only work with `Immutable.Map`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.seq" id="apidoc.element.react-immutable-proptypes.seq">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>seq
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seq = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.set" id="apidoc.element.react-immutable-proptypes.set">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.setOf" id="apidoc.element.react-immutable-proptypes.setOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>setOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSetOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x22;Set&#x22;, Immutable.Set.isSet);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.shape" id="apidoc.element.react-immutable-proptypes.shape">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>shape
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.stack" id="apidoc.element.react-immutable-proptypes.stack">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stack = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.stackOf" id="apidoc.element.react-immutable-proptypes.stackOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stackOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createStackOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x22;Stack&#x22;, Immutable.Stack.isStack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.ImmutablePropTypes" id="apidoc.module.react-immutable-proptypes.ImmutablePropTypes">module react-immutable-proptypes.ImmutablePropTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.contains" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.contains">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>contains
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var ImmutablePropTypes = require(&#x27;react-immutable-proptypes&#x27;);
+var MyReactComponent = React.createClass({
+    // ...
+    propTypes: {
+        myRequiredImmutableList: ImmutablePropTypes.listOf(
+            ImmutablePropTypes.<span class="apidocCodeKeywordSpan">contains</span>({
+                someNumberProp: React.PropTypes.number.isRequired
+            })
+        ).isRequired
+    }
+    // ...
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterable" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterable">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>iterable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">iterable = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterableOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.iterableOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>iterableOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createIterableOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x27;Iterable&#x27;, Immutable.Iterable.isIterable);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.list" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.list">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>list
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.listOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.listOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>listOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createListOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x27;List&#x27;, Immutable.List.isList);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Usage is simple, they work with and like any `React.PropType.*` validator.
+
+```js
+var ImmutablePropTypes = require(&#x27;react-immutable-proptypes&#x27;);
+var MyReactComponent = React.createClass({
+    // ...
+    propTypes: {
+        myRequiredImmutableList: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">listOf</span>(
+            ImmutablePropTypes.contains({
+                someNumberProp: React.PropTypes.number.isRequired
+            })
+        ).isRequired
+    }
+    // ...
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.map" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.map">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>map
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapContains" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapContains">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>mapContains
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createMapContainsChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes, &#x27;Map&#x27;, Immutable.Map.isMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.mapOf` allows you to control both map values nad keys (in Immutable.Map, keys could be _anything_ including
+ another Immutable collections). It accepts two arguments - first one for values, second one for keys (optional). If you are interested
+ in validation of keys only, just pass `React.PropTypes.any` as the first argument.
+
+```es6
+// ...
+aMap: ImmutablePropTypes.mapOf(
+React.PropTypes.any, // validation for values
+ImmutablePropTypes.<span class="apidocCodeKeywordSpan">mapContains</span>({ // validation for keys
+    a: React.PropTypes.number.isRequired,
+    b: React.PropTypes.string
+})
+)
+// ...
+const aMap = Immutable.Map([
+[Immutable.Map({a: 1, b: &#x27;2&#x27;}), &#x27;foo&#x27;],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.mapOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>mapOf
+        <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createMapOfTypeChecker(valuesTypeChecker, keysTypeChecker) {
+  return createMapOfTypeCheckerFactory(valuesTypeChecker, keysTypeChecker, &#x27;Map&#x27;, Immutable.Map.isMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.listOf` is based on `React.PropTypes.array` and is specific to `Immutable.List`.
+
+* `ImmutablePropTypes.mapOf` allows you to control both map values nad keys (in Immutable.Map, keys could be _anything_ including
+ another Immutable collections). It accepts two arguments - first one for values, second one for keys (optional). If you are interested
+ in validation of keys only, just pass `React.PropTypes.any` as the first argument.
+
+```es6
+// ...
+aMap: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">mapOf</span>(
+    React.PropTypes.any, // validation for values
+    ImmutablePropTypes.mapContains({ // validation for keys
+        a: React.PropTypes.number.isRequired,
+        b: React.PropTypes.string
+    })
+)
+// ...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMap" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMap">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedMap = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMapOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedMapOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedMapOf
+        <span class="apidocSignatureSpan">(valuesTypeChecker, keysTypeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createOrderedMapOfTypeChecker(valuesTypeChecker, keysTypeChecker) {
+  return createMapOfTypeCheckerFactory(valuesTypeChecker, keysTypeChecker, &#x27;OrderedMap&#x27;, Immutable.OrderedMap.isOrderedMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSet" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSet">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedSet = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSetOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.orderedSetOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>orderedSetOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createOrderedSetOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x27;OrderedSet&#x27;, Immutable.OrderedSet.isOrderedSet);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.record" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.record">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>record
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">record = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.recordOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.recordOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>recordOf
+        <span class="apidocSignatureSpan">(recordKeys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRecordOfTypeChecker(recordKeys) {
+  function validate(props, propName, componentName, location, propFullName, ...rest) {
+    var propValue = props[propName];
+    if (!(propValue instanceof Immutable.Record)) {
+      var propType = getPropType(propValue);
+      var locationName = location;
+      return new Error(
+        `Invalid ${locationName} \`${propFullName}\` of type \`${propType}\` ` +
+        `supplied to \`${componentName}\`, expected an Immutable.js Record.`
+      );
+    }
+    for (var key in recordKeys) {
+      var checker = recordKeys[key];
+      if (!checker) {
+        continue;
+      }
+      var mutablePropValue = propValue.toObject();
+      var error = checker(mutablePropValue, key, componentName, location, `${propFullName}.${key}`, ...rest);
+      if (error) {
+        return error;
+      }
+    }
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `ImmutablePropTypes.iterableOf` is the generic form of listOf/mapOf. It is useful when there is no need to validate anything other
+ than Immutable.js compatible (ie. `Immutable.Iterable`). Continue to use `listOf` and/or `mapOf` when you know the type.
+
+* `ImmutablePropTypes.recordOf` is like `contains`, except it operates on Record properties.
+
+```js
+// ...
+aRecord: ImmutablePropTypes.<span class="apidocCodeKeywordSpan">recordOf</span>({
+    keyA: React.PropTypes.string,
+    keyB: ImmutablePropTypes.list.isRequired
+})
+// ...
+```
+
+* `ImmutablePropTypes.mapContains` is based on `React.PropTypes.shape` and will only work with `Immutable.Map`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.seq" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.seq">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>seq
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seq = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.set" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.set">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.setOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.setOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>setOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSetOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x27;Set&#x27;, Immutable.Set.isSet);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.shape" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.shape">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>shape
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeChecker(shapeTypes) {
+  return createShapeTypeChecker(shapeTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stack" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stack">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>stack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stack = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stackOf" id="apidoc.element.react-immutable-proptypes.ImmutablePropTypes.stackOf">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.ImmutablePropTypes.</span>stackOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createStackOfTypeChecker(typeChecker) {
+  return createIterableTypeChecker(typeChecker, &#x27;Stack&#x27;, Immutable.Stack.isStack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.iterable" id="apidoc.module.react-immutable-proptypes.iterable">module react-immutable-proptypes.iterable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.iterable.iterable" id="apidoc.element.react-immutable-proptypes.iterable.iterable">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>iterable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">iterable = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.iterable.isRequired" id="apidoc.element.react-immutable-proptypes.iterable.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.iterable.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.list" id="apidoc.module.react-immutable-proptypes.list">module react-immutable-proptypes.list</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.list.list" id="apidoc.element.react-immutable-proptypes.list.list">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>list
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.list.isRequired" id="apidoc.element.react-immutable-proptypes.list.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.list.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.map" id="apidoc.module.react-immutable-proptypes.map">module react-immutable-proptypes.map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.map.map" id="apidoc.element.react-immutable-proptypes.map.map">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>map
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.map.isRequired" id="apidoc.element.react-immutable-proptypes.map.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.map.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.orderedMap" id="apidoc.module.react-immutable-proptypes.orderedMap">module react-immutable-proptypes.orderedMap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedMap.orderedMap" id="apidoc.element.react-immutable-proptypes.orderedMap.orderedMap">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedMap = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedMap.isRequired" id="apidoc.element.react-immutable-proptypes.orderedMap.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.orderedMap.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.orderedSet" id="apidoc.module.react-immutable-proptypes.orderedSet">module react-immutable-proptypes.orderedSet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedSet.orderedSet" id="apidoc.element.react-immutable-proptypes.orderedSet.orderedSet">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>orderedSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orderedSet = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.orderedSet.isRequired" id="apidoc.element.react-immutable-proptypes.orderedSet.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.orderedSet.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.record" id="apidoc.module.react-immutable-proptypes.record">module react-immutable-proptypes.record</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.record.record" id="apidoc.element.react-immutable-proptypes.record.record">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>record
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">record = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.record.isRequired" id="apidoc.element.react-immutable-proptypes.record.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.record.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.seq" id="apidoc.module.react-immutable-proptypes.seq">module react-immutable-proptypes.seq</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.seq.seq" id="apidoc.element.react-immutable-proptypes.seq.seq">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>seq
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seq = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.seq.isRequired" id="apidoc.element.react-immutable-proptypes.seq.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.seq.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.set" id="apidoc.module.react-immutable-proptypes.set">module react-immutable-proptypes.set</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.set.set" id="apidoc.element.react-immutable-proptypes.set.set">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.set.isRequired" id="apidoc.element.react-immutable-proptypes.set.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.set.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-immutable-proptypes.stack" id="apidoc.module.react-immutable-proptypes.stack">module react-immutable-proptypes.stack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.stack.stack" id="apidoc.element.react-immutable-proptypes.stack.stack">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.</span>stack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stack = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-immutable-proptypes.stack.isRequired" id="apidoc.element.react-immutable-proptypes.stack.isRequired">
+        function <span class="apidocSignatureSpan">react-immutable-proptypes.stack.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
